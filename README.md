@@ -31,15 +31,15 @@ Un projet **end-to-end** combinant **Computer Vision**, **NLP** et **MLOps** pou
 
 - **Module Computer Vision**
 ```bash
-python src/cv/realtime_detection.py --source 0  # Webcam
+    python src/cv/realtime_detection.py --source 0  # Webcam
 
 - **Module NLP**
 ```bash
-python src/nlp/sentiment_analysis.py --text "Entrez votre texte ici !! "
+  python src/nlp/sentiment_analysis.py --text "Entrez votre texte ici !! "
 
 - **Accès au dashboard**
 ```bash
-streamlit run src/dashboard/app.py
+  streamlit run src/dashboard/app.py
 
 
    
