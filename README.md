@@ -27,19 +27,19 @@ Un projet **end-to-end** combinant **Computer Vision**, **NLP** et **MLOps** pou
 
 - **Lancement de l'application**  
    ```bash
-   docker-compose up --build    
+     docker-compose up --build    
 
 - **Module Computer Vision**
-```bash
+  ```bash
     python src/cv/realtime_detection.py --source 0  # Webcam
 
 - **Module NLP**
-```bash
-  python src/nlp/sentiment_analysis.py --text "Entrez votre texte ici !! "
+  ```bash
+    python src/nlp/sentiment_analysis.py --text "Entrez votre texte ici !! "
 
 - **Accès au dashboard**
-```bash
-  streamlit run src/dashboard/app.py
+  ```bash
+    streamlit run src/dashboard/app.py
 
 
    
