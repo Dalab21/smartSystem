@@ -31,7 +31,7 @@ Un projet **end-to-end** combinant **Computer Vision**, **NLP** et **MLOps** pou
 
 - **Module Computer Vision**
   ```bash
-    python src/cv/realtime_detection.py --source 0  # Webcam
+    python src/cv/realtime_detection.py --source 0  # source 0 : cam du pc
 
 - **Module NLP**
   ```bash
@@ -52,7 +52,6 @@ SIADM/
 ├── models/                  
 ├── docker-compose.yml       
 └── requirements.txt         
-
 ## 🤝 Contribution
 
 Vos contributions sont les bienvenues ! ( possibilité de faire des **pull request**).
