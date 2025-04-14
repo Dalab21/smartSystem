@@ -44,7 +44,6 @@ Un projet **end-to-end** combinant **Computer Vision**, **NLP** et **MLOps** pou
 ## 📂 Structure du Projet
 
 SIADM/
-
 ├── src/
 |
 │   ├── cv/                  
