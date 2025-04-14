@@ -41,5 +41,22 @@ Un projet **end-to-end** combinant **Computer Vision**, **NLP** et **MLOps** pou
   ```bash
     streamlit run src/dashboard/app.py
 
+## 📂 Structure du Projet
 
-   
+SIADM/
+├── src/
+│   ├── cv/                  
+│   ├── nlp/                 
+│   ├── mlops/               
+│   └── dashboard/           
+├── models/                  
+├── docker-compose.yml       
+└── requirements.txt         
+
+## 🤝 Contribution
+
+Vos contributions sont les bienvenues ! ( possibilité de faire des **pull request**).
+
+## 📄 Licence
+
+No License. 
