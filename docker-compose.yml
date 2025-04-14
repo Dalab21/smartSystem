@@ -1,0 +1,69 @@
+version: '3.8'
+
+services:
+  # Backend FastAPI
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.api
+    ports:
+      - "8000:8000"
+    environment:
+      - MLFLOW_TRACKING_URI=http://mlflow:5000
+      - DATABASE_URL=postgresql://postgres:password@db:5432/siadm
+    depends_on:
+      - db
+      - mlflow
+    volumes:
+      - ./src:/app/src
+
+  # Dashboard Streamlit
+  dashboard:
+    build:
+      context: .
+      dockerfile: Dockerfile.streamlit
+    ports:
+      - "8501:8501"
+    environment:
+      - API_URL=http://api:8000
+    depends_on:
+      - api
+    volumes:
+      - ./src:/app/src
+
+  # MLflow Tracking Server
+  mlflow:
+    image: mlflow/mlflow
+    ports:
+      - "5000:5000"
+    environment:
+      - BACKEND_STORE_URI=postgresql://postgres:password@db:5432/siadm
+      - ARTIFACT_ROOT=/mlartifacts
+    volumes:
+      - ./mlartifacts:/mlartifacts
+    depends_on:
+      - db
+
+  # Base de données PostgreSQL
+  db:
+    image: postgres:13
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=siadm
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  # Monitoring (optionnel)
+  grafana:
+    image: grafana/grafana
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+
+volumes:
+  postgres_data:
+  mlartifacts:

@@ -1,0 +1,53 @@
+# Core
+python>=3.9
+
+# Computer Vision
+opencv-python>=4.7.0
+ultralytics>=8.0.0  # YOLOv8
+Pillow>=9.0.0
+
+# NLP & Transformers
+transformers>=4.30.0
+torch>=2.0.0
+sentencepiece>=0.1.99
+protobuf>=3.20.0
+
+# Dashboard & Visualisation
+streamlit>=1.22.0
+matplotlib>=3.7.0
+plotly>=5.14.0
+
+# Data Processing
+pandas>=1.5.0
+numpy>=1.24.0
+
+# MLOps & Tracking
+mlflow>=2.3.0
+wandb>=0.15.0
+
+# Scraping & Automation
+beautifulsoup4>=4.12.0
+requests>=2.28.0
+scrapy>=2.8.0  # Optionnel
+
+# API & Deployment
+fastapi>=0.95.0
+uvicorn>=0.21.0
+
+# Database
+psycopg2-binary>=2.9.0  # PostgreSQL
+pymongo>=4.3.0  # MongoDB
+
+# Tests & Quality
+pytest>=7.3.0
+black>=23.3.0
+flake8>=6.0.0
+
+# Utilitaires
+python-dotenv>=1.0.0
+tqdm>=4.65.0
+
+# Contient les modèles vidéo
+torchvision>=0.15.0 
+# SlowFast/I3D
+pytorchvideo>=0.1.5  
