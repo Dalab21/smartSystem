@@ -15,7 +15,7 @@ Un projet **end-to-end** combinant **Computer Vision**, **NLP** et **MLOps** pou
   - Reconnaissance d'actions (3D CNN).  
 - **📝 NLP**  
   - Analyse de sentiment (BERT/Transformers).  
-  - Scraping automatique (articles, tweets).  
+  - Scraping automatique (articles de https://news.ycombinator.com).  
 - **⚙️ MLOps**  
   - Tracking des modèles avec MLflow.  
   - Déploiement conteneurisé (Docker + FastAPI).  
